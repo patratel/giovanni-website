@@ -1,0 +1,16 @@
+{% macro active(activePage='home') %}
+
+        <nav class="navigation-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="navigation">
+                <a href="/team.html" class="{%if activePage == 'team' %} activeMobile {% endif %}"><li>Abstracts</li></a>
+                <a href="/themes.html" class="{%if activePage == 'themes' %} activeMobile {% endif %}"><li>Portfolio</li></a>
+                <a href="/services.html" class="{%if activePage == 'services' %} activeMobile {% endif %}"><li>Biography</li></a>
+                <a href="/publications.html" class="{%if activePage == 'publications' %} activeMobile {% endif %}"><li>Contact</li></a>
+            </ul>
+        </nav>
+
+{% endmacro %}

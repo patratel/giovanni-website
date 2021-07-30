@@ -1,0 +1,293 @@
+$primary: #00ad8f
+$green: #008B5E
+$secondary: #002147
+$third: #E5F0FF
+
+body
+    display: flex
+    position: relative
+    flex-flow: column
+    width: 100%
+    margin: 0
+    min-height: 100vh
+    //font-family: Commissioner, Roboto, Helvetica Neue,Helvetica ,Arial ,sans-serif
+    //font-family: 'KoHo', sans-serif
+    font-family: 'Poppins', sans-serif
+    background: $primary
+    color: white
+.page-content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: column
+    background: $third
+.page-title
+    color: $secondary
+    font-size: 28px
+    margin-bottom: 0
+    margin-top: 48px
+    @media screen and (max-width: 878px)
+       margin-top: 24px
+
+
+// Navigation CSS
+
+.activeMobile
+    color: $primary !important
+.navigation-toggle
+    display: block
+    position: fixed
+    top: 70px
+    left: 20px
+    align-self: flex-start
+    z-index: 1
+    -webkit-user-select: none
+    user-select: none
+    a
+        text-decoration: none
+        color: $secondary
+        transition: color 0.3s ease
+        &:hover
+            color: $primary
+    input
+        display: block
+        width: 40px
+        height: 32px
+        position: absolute
+        top: -16px
+        left: -7px
+        cursor: pointer
+        &:hover ~ span
+            background: $primary !important
+        opacity: 0
+        z-index: 2
+        -webkit-touch-callout: none
+    span
+        display: block
+        width: 33px
+        height: 4px
+        position: absolute
+        background: $secondary
+        border-radius: 3px
+        z-index: 1
+        transform-origin: 4px 0px
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s, top 0s ease
+    span:nth-last-child(2)
+        top: 10px
+        transform-origin: 0% 0%                
+    span:nth-last-child(3)
+        top: -10px
+        transform-origin: 0% 100%
+    input:checked
+        position: fixed
+        left: 12px
+        top: 52px
+    input:checked ~ span
+        position: fixed
+        opacity: 1
+        transform: rotate(45deg) translate(-2px, -1px)
+        background: $secondary
+        transform-origin: 15px 2px
+    input:checked ~ span:nth-last-child(3)
+        opacity: 0
+        transform: rotate(0deg) scale(0.2, 0.2)
+    input:checked ~ span:nth-last-child(2)
+        top: 70px
+        transform: rotate(-45deg) translate(0, -1px)
+    input:checked ~ ul.navigation
+        transform: none
+.navigation
+    position: fixed
+    width: 150px
+    margin: 0 0 0 -50px
+    top: 0
+    padding: 50px
+    height: 100vh
+    padding-top: 150px
+    -webkit-box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
+    -moz-box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
+    box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
+    background: $third
+    list-style-type: none
+    -webkit-font-smoothing: antialiased     
+    transform-origin: 0% 0%
+    transform: translate(-100%, 0)
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0)
+    li
+        padding: 10px 0
+        font-size: 22px
+
+// Footer CSS
+
+.footer
+    z-index: 2
+    position: relative
+    width: 100%
+    height: 250px
+    bottom: 0
+    overflow: hidden
+    display: flex
+    justify-content: center
+    .footer-wave
+        position: absolute
+        left: 0
+        width: 100%
+        height: 100%
+        background: $primary 
+        span
+            position: absolute
+            width: 170vw
+            height: 170vw
+            top: -300%
+            @media screen and (max-width: 420px)
+                top: 20%
+            @media screen and (min-width: 420px) and (max-width: 480px)
+                top: 10%
+            @media screen and (min-width: 480px) and (max-width: 540px)
+                top: 0
+            @media screen and (min-width: 540px) and (max-width: 600px)
+                top: -10%
+            @media screen and (min-width: 600px) and (max-width: 660px)
+                top: -20%
+            @media screen and (min-width: 660px) and (max-width: 720px)
+                top: -30%
+            @media screen and (min-width: 720px) and (max-width: 780px)
+                top: -40%
+            @media screen and (min-width: 780px) and (max-width: 840px)
+                top: -50%
+            @media screen and (min-width: 840px) and (max-width: 900px)
+                top: -60%
+            @media screen and (min-width: 900px) and (max-width: 960px)
+                top: -70%
+            @media screen and (min-width: 960px) and (max-width: 1020px)
+                top: -80%
+            @media screen and (min-width: 1020px) and (max-width: 1080px)
+                top: -90%
+            @media screen and (min-width: 1080px) and (max-width: 1140px)
+                top: -100%
+            @media screen and (min-width: 1140px) and (max-width: 1200px)
+                top: -110%
+            @media screen and (min-width: 1200px) and (max-width: 1260px)
+                top: -120%
+            @media screen and (min-width: 1260px) and (max-width: 1320px)
+                top: -130%
+            @media screen and (min-width: 1320px) and (max-width: 1380px)
+                top: -140%
+            @media screen and (min-width: 1380px) and (max-width: 1440px)
+                top: -150%
+            @media screen and (min-width: 1440px) and (max-width: 1500px)
+                top: -160%
+            @media screen and (min-width: 1500px) and (max-width: 1560px)
+                top: -170%
+            @media screen and (min-width: 1560px) and (max-width: 1620px)
+                top: -180%
+            @media screen and (min-width: 1620px) and (max-width: 1680px)
+                top: -190%
+            @media screen and (min-width: 1680px) and (max-width: 1740px)
+                top: -200%
+            @media screen and (min-width: 1740px) and (max-width: 1800px)
+                top: -210%
+            @media screen and (min-width: 1800px) and (max-width: 1860px)
+                top: -220%
+            @media screen and (min-width: 1860px) and (max-width: 1920px)
+                top: -230%
+            @media screen and (min-width: 1920px) and (max-width: 1980px)
+                top: -240%
+            @media screen and (min-width: 1980px) and (max-width: 2040px)
+                top: -250%
+            @media screen and (min-width: 2040px) and (max-width: 2100px)
+                top: -260%
+            @media screen and (min-width: 2100px) and (max-width: 2160px)
+                top: -270%
+            @media screen and (min-width: 2160px) and (max-width: 2220px)
+                top: -280%
+            @media screen and (min-width: 2220px) and (max-width: 2280px)
+                top: -290%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background: #000
+        span:nth-child(1)
+            animation: waveAnimation 5s linear infinite
+            border-radius: 45%
+            background: rgba(229,240,255,1)
+        span:nth-child(2)
+            animation: waveAnimation 10s linear infinite
+            border-radius: 40%
+            background: rgba(229,240,255,0.5)
+        span:nth-child(3)
+            animation: waveAnimation 15s linear infinite
+            border-radius: 42.5%
+            background: rgba(229,240,255,0.5)
+    .footer-content
+        display: flex
+        flex-flow: column
+        position: relative
+        z-index: 1
+        top: 50px
+    .footer-icon
+        width: 30px
+        height: 30px
+        color: $secondary
+        font-size: 30px
+        cursor: pointer
+        &:hover
+            color: $primary
+    .footer-icons
+        display: flex
+        flex-flow: row
+        margin-bottom: 10px
+        justify-content: space-evenly
+        font-weight: bold
+    .footer-label
+        text-align: center
+        font-size: 16px
+        margin-top: 16px
+        color: $secondary
+        cursor: pointer
+        text-decoration: none
+        &:hover
+            color: $primary
+@keyframes waveAnimation
+    0%
+        transform: translate(-50%, -75%) rotate(0deg)
+    100%
+        transform: translate(-50%, -75%) rotate(360deg)
+
+// Home page CSS
+
+.banner
+    &__container
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: center
+    &__img
+        height: 100vh
+        width: 100%
+    &__vid
+        object-fit: cover
+        width: 100%
+        height: 100vh
+        top: 0
+        left: 0
+    &__title
+        background: rgb(0,212,255)
+        background: radial-gradient(circle, rgba(0,212,255,0) 0%, rgba(255,255,255,1) 82%)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100vh
+        text-align: center
+        color: $primary
+        text-shadow: 2px 2px $secondary
+        font-size: 60px
+        position: absolute
+
+// Image Section
+
+// Home Page Images
+
+#banner-img
+    background-image: url('https://www.byhien.com/wp-content/uploads/2020/05/abstract-ocean-painting-2.jpg')
+    background-size: cover

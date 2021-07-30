@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+{% block content %}
+
+  {{nav.active('home')}}
+
+  <section class="banner-section" id="home-page">
+    <div class="banner__container">
+        {# <div class="banner__img" id="banner-img"></div> #}
+        <video playsinline autoplay muted loop class="banner__vid">
+          <source src="videos/ocean.mp4" type="video/mp4">
+        </video>
+        <div class="banner__title">Giovanni Consorti</div>
+    </div>
+  </section>
+
+  <section class="abstracts">
+    <h1>There after</h1>
+  </section>
+
+{% endblock %}

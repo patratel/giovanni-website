@@ -262,6 +262,8 @@ body
     justify-content: center
     background: white
     &__title
+        @media screen and (max-width: 878px)
+            font-size: 32px
         color: $secondary
         font-size: 40px
 .abstract
@@ -293,13 +295,16 @@ body
             @media screen and (max-width: 878px)
                 font-size: 20px
             margin: 0 0 12px 0
+        .hover-card-text
+            @media screen and (max-width: 878px)
+                font-size: 16px
         .expansion-content
             display: none
             background: 'linear-gradient(0deg, rgba(229,240,255,1) 80%, rgba(255,255,255,0) 96%, rgba(255,255,255,0) 100%)'
             margin-top: 300px
             padding: 48px 160px
             @media screen and (max-width: 878px)
-                padding: 24px 48px
+                padding: 0 8px 24px 8px
             justify-content: center
             align-items: center
             font-size: 18px
@@ -495,6 +500,8 @@ body
         text-align: center
         color: $primary
         text-shadow: 2px 2px $secondary
+        @media screen and (max-width: 878px)
+            font-size: 40px
         font-size: 60px
         position: absolute
         & > span
@@ -510,6 +517,8 @@ body
     background: white
     padding-top: 60px
     &__title
+        @media screen and (max-width: 878px)
+            font-size: 32px
         color: $secondary
         font-size: 40px
 
@@ -551,6 +560,8 @@ body
         position: relative
         overflow: hidden
         .project-card-name
+            @media screen and (max-width: 878px)
+                font-size: 16px
             font-size: 18px
         .project-card-text
             background: white
@@ -607,7 +618,8 @@ body
         background: white
         z-index: 8
         border-radius: 10%
-
+        @media screen and (max-width: 878px)
+                font-size: 16px
         -webkit-box-shadow: 0px 0px 42px 0px  $primary
         -moz-box-shadow: 0px 0px 42px 0px  $primary
         box-shadow: 0px 0px 42px 0px $primary
@@ -675,6 +687,8 @@ body
     margin-bottom: 100px
     margin-top: 40px
     &__title
+        @media screen and (max-width: 878px)
+            font-size: 32px
         color: $secondary
         font-size: 40px
         text-align: center
@@ -719,8 +733,12 @@ body
                 background: $primary
     &__name
         font-size: 40px
+        @media screen and (max-width: 878px)
+            font-size: 32px
     &__text
         font-size: 18px
+        @media screen and (max-width: 878px)
+            font-size: 16px
         margin-top: 20px
 // Image Section
 

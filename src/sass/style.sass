@@ -13,7 +13,7 @@ body
     //font-family: Commissioner, Roboto, Helvetica Neue,Helvetica ,Arial ,sans-serif
     //font-family: 'KoHo', sans-serif
     font-family: 'Poppins', sans-serif
-    background: $primary
+    background: white
     color: white
 .page-content
     display: flex
@@ -38,12 +38,13 @@ body
     display: block
     position: fixed
     top: 70px
-    left: 20px
+    left: 30px
     align-self: flex-start
     z-index: 5
     -webkit-user-select: none
     user-select: none
-    a
+    div
+        cursor: pointer
         text-decoration: none
         color: $secondary
         transition: color 0.3s ease
@@ -107,7 +108,7 @@ body
     -webkit-box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
     -moz-box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
     box-shadow: 10px 0px 7px -12px rgba(0,33,71,1)
-    background: $third
+    background: white
     list-style-type: none
     -webkit-font-smoothing: antialiased     
     transform-origin: 0% 0%
@@ -205,7 +206,7 @@ body
                 top: -290%
             left: 50%
             transform: translate(-50%, -50%)
-            background: #000
+            background: white
         span:nth-child(1)
             animation: waveAnimation 5s linear infinite
             border-radius: 45%
@@ -217,25 +218,24 @@ body
         span:nth-child(3)
             animation: waveAnimation 15s linear infinite
             border-radius: 42.5%
-            background: rgba(229,240,255,0.5)
+            background: white
     .footer-content
         display: flex
         flex-flow: column
         position: relative
         z-index: 1
         top: 50px
-    .footer-icon
-        width: 30px
-        height: 30px
+    .footer-icon > svg
+        width: 40px
+        height: 40px
         color: $secondary
-        font-size: 30px
+        font-size: 40px
         cursor: pointer
         &:hover
             color: $primary
     .footer-icons
         display: flex
         flex-flow: row
-        margin-bottom: 10px
         justify-content: space-evenly
         font-weight: bold
     .footer-label
@@ -346,7 +346,7 @@ body
 
             & > img
                 margin: 48px 0 24px 0
-                height: 400px
+                width: 100%
         p
             margin-bottom: 0
             @media screen and (max-width: 878px)
@@ -482,7 +482,7 @@ body
         height: 100%
         z-index: 3
         bottom: 0
-        background: rgb(0,212,255)
+        background: white
         background: linear-gradient(180deg, rgba(0,212,255,0) 0%, rgba(255,255,255,1) 100%)
     &__title
         background: rgb(0,212,255)
@@ -604,7 +604,7 @@ body
         z-index: 7
     .project-content
         color: $secondary
-        background: $third
+        background: white
         z-index: 8
         border-radius: 10%
 
@@ -655,19 +655,73 @@ body
             left: 0
             width: 100%
             height: 80px
-            background: -webkit-linear-gradient( bottom , $third, rgba(229, 240, 255, 0))
-            background: linear-gradient(to top, $third, rgba(229, 240, 255, 0))
-        .project-content-text
-            padding: 12px 48px
-            @media screen and (max-width: 650px)
-               padding: 24px 24px
-            .person-content-title
-                text-align: center
-                margin-bottom: 24px
-                width: 100%
-                @media screen and (max-width: 650px)
-                    margin-top: 0
+            background: -webkit-linear-gradient( bottom , white, rgba(255, 255, 255, 0))
+            background: linear-gradient(to top, white, rgba(255, 255, 255, 0))
+.project-content-text
+    padding: 12px 48px
+    @media screen and (max-width: 650px)
+        padding: 24px 24px
+.project-content-title
+        text-align: center
+        margin-bottom: 24px
+        width: 100%
+        @media screen and (max-width: 650px)
+            margin-top: 0
+//Biography CSS
 
+.biography
+    background: white
+    position: relative
+    margin-bottom: 100px
+    margin-top: 40px
+    &__title
+        color: $secondary
+        font-size: 40px
+        text-align: center
+        margin-top: 40px
+    &__vid
+        object-fit: cover
+        width: 100%
+        margin-top: 40px
+        height: 100vh
+        top: 0
+        left: 0
+    &__content
+        position: absolute
+        bottom: 0
+        background: white
+        display: flex
+        flex-flow: column
+        justify-content: flex-end
+        color: $secondary
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(0,212,255,0) 0%, rgba(255,255,255,1) 100%)
+    &__innerContainer
+        max-height: 40%
+        margin: 0 64px
+        overflow-y: scroll
+        position: relative
+        @media screen and (max-width: 878px)
+            margin: 0 32px
+        &::-webkit-scrollbar
+            background: $third
+            border-radius: 5px
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+            width: 10px
+        &::-webkit-scrollbar-thumb
+            background-color: $secondary
+            border-radius: 3px
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+            &:hover
+                background: $primary
+    &__name
+        font-size: 40px
+    &__text
+        font-size: 18px
+        margin-top: 20px
 // Image Section
 
 // Home Page Images
